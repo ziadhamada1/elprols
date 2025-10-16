@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title> -مشروع البرلس - جيوماتكس المجموعة العاشره </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- الهيدر --><header>
+  <div class="top-images">
+    <img src="imgs/الجامعه.jpeg" alt="" width="100px" height="20px">
+    <img src="imgs/القسم.jpeg" alt="" width="50px" height="20px">
+  </div>
+
+  <div class="logo">
+    <h2>
+      مقرر تطبيقات الاستشعار عن بعد
+      <br>
+      اشراف : د. اسماء القرش
+      <br>
+      مشروع بحيره البرلس
+    </h2>
+  </div>
+</header>
+
+  
+<section id="students" class="content-section">
+  <h2>👨‍🎓 أسماء الطلاب</h2>
+
+  <div class="students-grid">
+    <div class="student-card">زياد حماده عواد</div>
+    <div class="student-card">ابراهيم احمد مرسي</div>
+    <div class="student-card">زياد ايهاب السيد</div>
+    <div class="student-card">زياد محمود احمد</div>
+    <div class="student-card">سيف الدين محمود احمد</div>
+    <div class="student-card">عمر خيري محمد</div>
+    <div class="student-card">محمد ايهاب السعيد</div>
+    <div class="student-card">مروان محمود مسعد</div>
+    <div class="student-card">يوسف سامح سيد</div>
+    <div class="student-card">اسراء عصام فريد</div>
+    <div class="student-card">الاء علام محمود</div>
+    <div class="student-card">بسمله فتحي سيف</div>
+    <div class="student-card">مريم محمد عبدالمنعم</div>
+    <div class="student-card">ملك عادل بنداري</div>
+    <div class="student-card">منار ماهر ابراهيم</div>
+  </div>
+
+  <h3>تحت إشراف: <span>د. أسماء القرش</span></h3>
+</section>
+
+
+
+
+  <!-- سكشن عن المنطقة -->
+  <section id="about" class="about-section">
+    <h2>🌿 عن منطقة البرلس / About Borollos</h2>
+    <p class="about-text">
+      بحيرة البرلس تقع شمال دلتا مصر وتعتبر من أكبر البحيرات المالحة في مصر. تتميز المنطقة بتنوع الأنشطة الاقتصادية مثل الزراعة، الصيد، والصناعة التقليدية. كما تُعد المنطقة موطناً للعديد من الطيور والمخلوقات البحرية.
+    </p>
+    <p class="about-text en">
+      Borollos Lake is located in the northern Nile Delta of Egypt and is one of the country's largest saline lakes. The area is characterized by diverse economic activities such as agriculture, fishing, and traditional industries. It is also home to various bird species and marine life.
+    </p>
+    <ul class="about-list">
+      <li>🌾 الزراعة: أراضي خصبة حول البحيرة / Agriculture: fertile lands around the lake</li>
+      <li>🎣 الصيد: مصدر غذاء ووظائف للصيادين / Fishing: food source and livelihoods</li>
+      <li>🏭 الصناعة: مصانع تقليدية ومشروعات صغيرة / Industry: traditional factories & small projects</li>
+      <li>🏞️ السياحة: زيارة البحيرة للطبيعة والطيور المهاجرة / Tourism: nature & migratory birds visits</li>
+    </ul>
+
+    <div class="about-image-container">
+      <img src="imgs/ChatGPT Image 4 أكتوبر 2025، 11_17_40 م.png" alt="بحيرة البرلس" />
+    </div>
+  </section>
+  <!-- /////////////////////// -->
+   
+  <!-- إحصائيات عامة -->
+  <section id="general-stats" class="stats-section">
+    <h2>📊  إحصائيات عامة لمنطقة البرلس واهميتها الاقتصاديه</h2>
+    <div class="stats-cards">
+      <div class="stat-card">
+        <div class="stat-icon">🌾</div>
+        <div class="stat-info">
+          <h3>إجمالي مساحة الزراعة / Total Agriculture Area</h3>
+          <p>1250 فدان / feddan</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏡</div>
+        <div class="stat-info">
+          <h3>عدد المزارع / Number of Farms</h3>
+          <p>85 مزرعة / farms</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🎣</div>
+        <div class="stat-info">
+          <h3>كمية الصيد السنوية / Annual Catch</h3>
+          <p>450 طن / tons</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🌿</div>
+        <div class="stat-info">
+          <h3>المشروعات البيئية / Environmental Projects</h3>
+          <p>12 مشروع / projects</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== أقسام جديدة بعد عن البرلس ========== -->
+
+  <!-- الموقع الفلكي -->
+  <section id="location-info" class="content-section">
+    <h2>📍 الموقع الفلكي والجغرافي / Astronomical & Geographical Location</h2>
+    <p>
+      تقع بحيرة البرلس بين خطوط طول وخطوط عرض محددة وتوجد على ساحل البحر المتوسط بمحافظة كفر الشيخ.
+    </p>
+    <p class="en">
+      Borollos Lake lies within specific longitude and latitude bounds located on the Mediterranean coast in Kafr El-Sheikh Governorate.
+    </p>
+
+    <div class="location-cards">
+      <div class="loc-card">
+        <h4>خطوط الطول / Longitude</h4>
+        <p>30° 25′ E – 31° 10′ E</p>
+      </div>
+      <div class="loc-card">
+        <h4>دوائر العرض / Latitude</h4>
+        <p>31° 20′ N – 31° 35′ N</p>
+      </div>
+      <div class="loc-card">
+        <h4>المسقط المستخدم / Projection</h4>
+        <p>UTM Zone 36N (WGS 84)</p>
+      </div>
+    </div>
+
+    <div class="location-map-placeholder">
+      <img src="imgs/بحيره_البرلس.jpg" alt="موقع بحيرة البرلس على خريطة مصر" />
+      <p class="en">Placeholder map image. Replace with actual map image or embedded small map.</p>
+    </div>
+  </section>
+  <!-- ///////////////////////////////// -->
+
+  <!-- السلايدر الحياة البرية -->
+  <section class="wildlife-slider-section">
+    <h2>🌿 المناطق والطبيعة / Natural Areas & Wildlife</h2>
+    <div class="wildlife-slider" id="wildlifeSlider">
+      <div class="wildlife-slide active">
+        <img src="imgs/2005.png" alt="طبيعة 1" />
+        <div class="caption">  2005 </div>
+      </div>
+      <div class="wildlife-slide">
+        <img src="imgs/2005_.png" alt="طبيعة 2" />
+        <div class="caption">  2005 </div>
+      </div>
+
+      <div class="wildlife-slide">
+        <img src="imgs/20155.jpeg" alt="طبيعة 3" />
+        <div class="caption"> 2015</div>
+      </div>
+    </div>
+
+
+    
+    
+      <div class="wildlife-slide">
+        <img src="imgs/2015.png" alt="طبيعة 3" />
+        <div class="caption">   2015 </div>
+      </div>
+    </div>
+
+
+      <div class="wildlife-slide">
+        <img src="imgs/200025.png" alt="طبيعة 3" />
+        <div class="caption"> 2025</div>
+      </div>
+    </div>
+
+
+    
+    
+      <div class="wildlife-slide">
+        <img src="imgs/20025.png" alt="طبيعة 3" />
+        <div class="caption">   2025 </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <!-- مصادر البيانات -->
+  <section id="data-sources" class="content-section">
+    <h2>🛰️ مصادر البيانات الجغرافية / Geospatial Data Sources</h2>
+    <p>
+      الجدول التالي يوضح أنواع البيانات المستخدمة (مرئيات أقمار صناعية، DEM، خرائط طبوغرافية) ومصدر كل منها.
+    </p>
+    <p class="en">
+      The table below lists the types of data used (satellite imagery, DEM, topographic maps) and their sources.
+    </p>
+
+    <div class="data-table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>نوع البيانات / Data Type</th>
+            <th>القمر الصناعي / Satellite</th>
+            <th>الدقة / Resolution</th>
+            <th>السنة / Year</th>
+            <th>المصدر / Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> مرئية / Optical</td>
+            <td>Landsat 9</td>
+            <td>15m</td>
+            <td>2025</td>
+            <td>USGS Earth Explorer</td>
+          </tr>
+          <tr>
+            <td>مرئية / Optical</td>
+            <td>Landsat 8</td>
+            <td>30m</td>
+            <td>2015</td>
+            <td>USGS Earth Explorer</td>
+          </tr>
+          <tr>
+            <td>مرئية / Optical</td>
+            <td>Landsat 8</td>
+            <td>30m</td>
+            <td>2005</td>
+            <td>USGS Earth Explorer</td>
+          </tr>
+
+            <tr>
+            <td>DEM</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>USGS Earth Explorer</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- تحليل التغير LULC -->
+  <section id="lulc-change" class="content-section">
+    <h2>🌍 تحليل التغير في الغطاء الأرضي / Land Use & Land Cover Change</h2>
+    <p>
+      عرض مقارنة سابق / لاحق لصور الغطاء الأرضي لتوضيح مناطق التوسع الزراعي، تراجع المسطحات المائية، أو زيادة العمران.
+    </p>
+    <p class="en">
+      A before/after comparison of land cover images to show areas of agricultural expansion, decline of water bodies, or urban growth.
+    </p>
+
+    <!-- Simple before-after slider (replace images with actual classified maps) -->
+    <div class="before-after">
+      <div class="ba-images">
+        <img src="imgs/1985.jpg" alt="قبل / Before" class="ba-before" />
+        <img src="imgs/2025.jpg" alt="بعد / After" class="ba-after" />
+      </div>
+      <input type="range" id="baRange" min="0" max="100" value="50" />
+      <div class="ba-labels">
+        <span>  سنه المنطقه (2005)</span>
+        <span class="en"> سنه (2025)</span>
+      </div>
+      <p class="caption">
+        استبدل هذه الصور بخرائط التصنيف الحقيقية (مثلاً نسخة صنفت بـ ArcGIS أو QGIS). /
+        Replace these with real classified maps (e.g., from ArcGIS/QGIS).
+      </p>
+    </div>
+  </section>
+  
+  <section id="results" class="content-section">
+    <h2>🧭 النتائج والاستنتاجات / Results & Conclusions</h2>
+    <p>
+      ملخص سريع لنتائج التحليل (حدود البحيرة، اتجاهات استخدامات الأراضي، نقاط التغير الرئيسية، توصيات للمحافظة).
+    </p>
+  
+
+    <ul class="results-list">
+      <li>تحديد حدود البحيرة بدقة باستخدام صور حديثة </li>
+      <li>رصد تراجع في المسطحات المائية عبر الزمن من الاتجاه الجنوبي الغربي </li>
+      <li>تحديد مناطق التحول في الاستخدامات (زراعة - عمران) </li>
+    </ul>
+  </section>
+
+  <!-- إحصاءات المساحات -->
+  <section id="area-stats" class="content-section">
+    <h2>📊 إحصاءات المساحات واستخدامات الأراضي / Area & Land Use Statistics</h2>
+    
+<div class="stats-table-wrapper">
+  <table class="stats-table">
+    <thead>
+      <tr>
+        <th>نوع الاستخدام / Land Use</th>
+        <th>المساحة (فدان) / Area (feddan)</th>
+        <th>النسبة / Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>زراعة / Agriculture</td>
+        <td>65,000</td>
+        <td>59%</td>
+      </tr>
+      <tr>
+        <td>صيد ومزارع سمكية / Fishing & Fish Farms</td>
+        <td>23,000</td>
+        <td>21%</td>
+      </tr>
+      <tr>
+        <td>سكنية / Residential</td>
+        <td>9,000</td>
+        <td>8%</td>
+      </tr>
+      <tr>
+        <td>أراضٍ فضاء أو رطبة / Open & Marsh</td>
+        <td>13,000</td>
+        <td>12%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </section>
+
+  <!-- الأدوات الجغرافية -->
+  <section id="tools" class="content-section">
+    <h2>🧰 البرمجيات الجغرافية المستخدمة / GIS Tools Used</h2>
+  
+    <div class="tools-list">
+      <div class="tool-card">
+        <h4>ArcGIS Pro</h4>
+        <p class="en">Advanced geospatial processing & classification</p>
+      </div>
+      <div class="tool-card">
+        <h4>ArcGIS Online / StoryMaps</h4>
+        <p class="en">Create story maps, dashboards and web maps</p>
+      </div>
+      <div class="tool-card">
+        <h4>QGIS</h4>
+        <p class="en">Open-source GIS for classification & processing</p>
+      </div>
+      <div class="tool-card">
+        <h4>Copernicus / USGS / NASA</h4>
+        <p class="en">Satellite data sources</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- النتائج -->
+
+  <!-- Story Map / Dashboard -->
+
+
+  <!-- الخريطة التفاعلية الموجودة بالفعل -->
+
+  <section class="maap">
+    <h2>📍 عينات البصمات الطيفيه للمنطقه للبرلس</h2>
+
+    <div class="upload-container">
+      <label for="fileInput" class="upload-btn">📂 رفع ملف CSV </label>
+      <input type="file" id="fileInput" accept=".geojson,.json,.csv" hidden />
+    </div>
+
+    <div id="filter">
+      <label><input type="checkbox" value="زراعة" checked /> زراعة / Agriculture</label>
+      <label><input type="checkbox" value="صناعة" checked /> صناعة / Industry</label>
+      <label><input type="checkbox" value="سكنية" checked /> سكنية / Residential</label>
+      <label><input type="checkbox" value="صيد" checked /> صيد / Fishing</label>
+    </div>
+
+    <div id="map"></div>
+<div id="dashboard" class="interactive-bg">
+  <canvas id="bgCanvas"></canvas>
+  <h3>📊 إحصائيات الأنشطة / Activity Statistics</h3>
+  <canvas id="typeChart"></canvas>
+</div>
+
+  </section>
+
+  <!-- جدول النقاط -->
+  <section id="points-table">
+    <h2>📋 قائمة النقاط / Points List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>النوع / Type</th>
+          <th>خط العرض / Latitude</th>
+          <th>خط الطول / Longitude</th>
+          <th>ملاحظات / Notes</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </section>
+<!--  //////////////////////////////////////////////////////////////////-->
+  <div class="export-buttons" style="text-align:center; margin-top:20px;">
+  <button id="exportCSV" class="btn">📊 تحميل CSV</button>
+  <button id="exportPDF" class="btn">📥 تحميل PDF</button>
+</div>
+
+
+<!-- القسم الأول -->
+<div class="hover">
+  <div class="overlay">
+    <div class="content">
+      <img src="imgs/20025.png" alt="تحليل مكاني" class="center-img">
+      <h2>📊 تقرير التحليل المكاني لمنطقة البرلس لعام 2025</h2>
+      <p>اضغط لعرض التفاصيل</p>
+      <div class="buttons">
+        <button class="btn view-btn show-map">🔍 عرض الخريطة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- الصورة المكبرة الأولى -->
+<div class="fullscreenImage">
+  <img src="imgs/20025.png" alt="الخريطة المكبرة">
+  <button class="closeFullscreen">✖️</button>
+</div>
+
+<!-- القسم الثاني -->
+<div class="hover2">
+  <div class="overlay">
+    <div class="content">
+      <img src="imgs/2015.png" alt="تحليل مكاني" class="center-img">
+      <h2>📊 تقرير التحليل المكاني لمنطقة البرلس لعام 2015</h2>
+      <p>اضغط لعرض التفاصيل</p>
+      <div class="buttons">
+        <button class="btn view-btn show-map">🔍 عرض الخريطة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- الصورة المكبرة الثانية -->
+<div class="fullscreenImage">
+  <img src="imgs/2015.png" alt="الخريطة المكبرة">
+  <button class="closeFullscreen">✖️</button>
+</div>
+
+
+
+
+<!-- القسم الثاني -->
+<div class="hover1">
+  <div class="overlay">
+    <div class="content">
+      <img src="imgs/2005_.png" alt="تحليل مكاني" class="center-img">
+      <h2>📊 تقرير التحليل المكاني لمنطقة البرلس لعام 2005</h2>
+      <p>اضغط لعرض التفاصيل</p>
+      <div class="buttons">
+        <button class="btn view-btn show-map">🔍 عرض الخريطة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- الصورة المكبرة الثانية -->
+<div class="fullscreenImage">
+  <img src="imgs/2005_.png" alt="الخريطة المكبرة">
+  <button class="closeFullscreen">✖️</button>
+</div>
+
+
+
+
+
+<!-- القسم الثاني -->
+<div class="hover3">
+  <div class="overlay">
+    <div class="content">
+      <img src="imgs/الرابعه.png" alt="تحليل مكاني" class="center-img">
+      <h2>📊 shapefile من ال BBBike</h2>
+      <p>اضغط لعرض التفاصيل</p>
+      <div class="buttons">
+        <button class="btn view-btn show-map">🔍 عرض الخريطة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- الصورة المكبرة الثانية -->
+<div class="fullscreenImage">
+  <img src="imgs/الرابعه.png" alt="الخريطة المكبرة">
+  <button class="closeFullscreen">✖️</button>
+</div>
+
+
+
+
+
+
+
+
+<!-- سكشن معرض الخرائط -->
+<section id="maps-gallery" class="content-section">
+  <h2>🗺️تحليل سطح الارض</h2>
+
+  <div class="maps-grid">
+    <div class="map-item">
+      <img src="imgs/slope.jpeg" alt="خريطة 2005">
+      <h3>خريطة slope</h3>
+    </div>
+
+    <div class="map-item">
+      <img src="imgs/hilshade.png" alt="خريطة 2015">
+      <h3>خريطة hilshade</h3>
+    </div>
+
+    <div class="map-item">
+      <img src="imgs/aspect.jpeg" alt="خريطة 2025">
+      <h3>خريطة aspect</h3>
+    </div>
+
+    <div class="map-item">
+      <img src="imgs/Screenshot 2025-10-16 223730.png" alt="خريطة إضافية">
+      <h3>خريطة contour lines</h3>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Leaflet -->
+   <!-- لازم تضيف مكتبة jspdf -->
+
+<!-- 🧠 سكربت التصدير بتاعك -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+   
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- JS -->
+   
+  <script src="script.js"></script>
+</body>
+</html>
